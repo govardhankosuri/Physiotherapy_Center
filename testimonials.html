@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Testimonials -Vitality Physiotherapy Center</title>
+</head>
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #eaf1ef;
+            color: #333;
+            line-height: 1.6;
+        }
+         
+        .header{
+    width:100%;
+    background:#fff;
+    position:sticky;
+    top:0;
+    z-index:999;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:10px 0px;
+    text-decoration: none;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+
+.logo img{
+    height: 80px;
+    width: 180px;
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.nav-links a{
+    color:#333;
+    align-items: center;
+    font-weight:500;
+    transition:.3s;
+    text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links .active{
+    color:#0f4c81;
+}
+
+.nav-btn{
+    display:flex;
+    align-content: center;
+
+}
+.btn-outline1{
+    display:inline;
+    border:2px solid #0f4c81;
+    color:#0f4c81;
+    padding:12px 30px;
+    border-radius:30px;
+    transition:.3s;
+    margin-left:15px;
+    }
+
+    .btn-outline1:hover{
+
+    color:black;
+    }
+
+
+
+
+
+/* ===========================
+   HAMBURGER
+=========================== */
+
+    .hamburger{
+    display:none;
+    cursor:pointer;
+    }
+
+    .hamburger span{
+    display:block;
+    width:25px;
+    height:3px;
+    margin:6px;
+    background:#0f4c81;
+    transition:.4s;
+    }
+
+        .hero {
+            background: linear-gradient(rgba(0,168,107,0.65),rgba(0,119,182,0.55)), 
+            url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVfVwuAAtyS860wXFuUKoXlMZe4s_080k0nx3jQN0JQA&s=10') center/cover no-repeat;
+            height: 60vh;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            max-width: 650px;
+            margin:auto;
+        }
+
+        .hero a {
+            color: #ffff;
+            font-size: 23px;
+            text-decoration: none;
+            background:#eebf04 ;
+            display: inline-block;
+            border-radius: 19px;
+            width: 220px;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .hero a:hover{
+            color: #f9fbfc;
+            background: #1422db;
+            transform: translateY(-8px);
+            box-shadow: 15px 15px 15px  rgba(73, 7, 228, 0.65);
+        }
+
+        .section {
+            padding: 70px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section h2 {
+            font-size: 34px;
+            text-align: center;
+            margin-bottom: 15px;
+            color: #100936;
+        }
+
+        .section .sub {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 50px;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 25px;
+        }
+
+        .review-card {
+            background: rgb(4, 110, 151);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,18,17,0.65);
+            border-left:3px solid #404049;
+             border-bottom:3px solid #404049;
+             align-items: center;
+             gap: 20px;
+               width: 100%;
+               max-width: 450px;
+               height: auto;
+               margin: 0 auto;
+             transition: transform 0.4s ease-in-out;
+        }
+
+        .review-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .review-card img {
+            width: 100%;
+            height: 220px;
+           border-radius: 12px;
+            object-fit: cover;
+        }
+
+        .review-card h3 {
+            font-size: 20px;
+            color: #fbfdfd;
+            text-align: center;
+        }
+
+        .review-card h5 {
+            text-align: center;
+            font-size: 16px;
+            color: #fff;
+        }
+
+        .review-card .stars {
+            text-align: center;
+            color: #eebf04;
+        }
+
+        .review-card p {
+              text-align: center;
+            font-size: 16px;
+            color: #fff;
+        }
+
+        .review-card h4 {
+              text-align: center;
+            font-size: 18px;
+            color: #f0d906;
+        }
+
+         .video-grid {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 25px;
+        }
+
+         .video-card {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,18,17,0.65);
+            border-left:3px solid #404049;
+             border-bottom:3px solid #404049;
+             align-items: center;
+             gap: 20px;
+               width: 100%;
+               max-width: 450px;
+               height: auto;
+               margin: 0 auto;
+              transition: transform 0.4s ease-in-out;
+        }
+
+        .video-card:hover {
+            transform: translateY(-10px);
+        }
+
+          .video-card img {
+            width: 100%;
+            height: 220px;
+           border-radius: 12px;
+            object-fit: cover;
+        }
+
+         .video-card .name {
+            font-size: 20px;
+            color: #030a47;
+            text-align: center;
+        }
+
+        .video-card a{
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: 600;
+            margin-left: 130px;
+            display: inline-block;
+            background: #2b38a8;
+            color: #f0d906;
+            border-radius: 20px;
+            padding: 8px 10px;
+        }
+
+        footer {
+            background: #052541;
+            padding: 20px 20px;
+        }
+
+        footer h1 {
+            font-size: 27px;
+            text-align: center;
+            color: #fff;
+        }
+
+          footer h2 {
+            font-size: 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+          footer h3{
+            font-size: 18px;
+            text-align: center;
+            color: #fff;
+        }
+
+          footer p {
+            font-size: 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+
+        
+
+    
+        /* Responsive rules for mobile */
+        @media (max-width: 768px) {
+
+            .hamburger{
+                display: block;
+                margin-left:0px;
+            }
+            
+            .header {
+                width: 393px;
+            }
+
+            .nav-links{
+                display: none;
+                position: absolute;
+                top: 90px;
+                left: 16px;
+                right: 16px;
+                background: #fff;
+                flex-direction: column;
+                gap: 10px;
+                padding: 12px;
+                border-radius: 8px;
+                box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+                z-index: 999;
+                align-items: center;
+            }
+
+            .nav-links.active{
+                display: flex;
+            }
+
+            .nav-links a{
+                padding: 8px 10px;
+                width: 100%;
+                text-align: center;
+            }
+
+            .logo img{
+                height: 60px;
+                width: auto;
+            }
+
+            .review-grid, .video-grid {
+                grid-template-columns: 1fr;
+                padding: 0 10px;
+            }
+
+            .review-card, .video-card{
+                width: 100%;
+                max-width: none;
+                margin: 0 auto;
+                height: auto;
+                padding: 18px;
+            }
+
+            .video-card a{
+                margin-left: 80px;
+            }
+            .btn-outline1{
+                padding:10px 18px;
+            }
+
+            footer {
+                width: 100%;
+            }
+        }
+
+        /* Hamburger active state */
+        .hamburger.active span:nth-child(1){
+            transform: translateY(9px) rotate(45deg);
+        }
+        .hamburger.active span:nth-child(2){
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3){
+            transform: translateY(-9px) rotate(-45deg);
+        }
+        </style>
+
+<body>
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <!-- Logo -->
+            <div class="logo">
+                <img src="physiotherapy.logo.png" class="img">
+                
+            </div>
+
+            <!-- Navigation -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">Aboutus</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="doctors.html">Doctors</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a href="appointment.html" class="btn-outline1">
+                        Book Appointment
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Hamburger -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </nav>
+
+    </header>
+    
+    <!---hero section-->
+    <section class="hero">
+        <div>
+            <h1>What Our Patients Say</h1>
+            <p>Real stories of recoveries, pain,relief, and getting back to active life with Vitaltiy Physiotherapy Center.</p>
+            <br>
+            <a href="appointment.html">Book Appointment</a>
+        </div>
+    </section>
+
+    <!--Text reveiws-->
+    <section class="section">
+        <h2>Patient Reviews</h2>
+        <p class="sub">Trusted by 2000+ patients for pain-free living.</p>
+
+        <div class="review-grid">
+
+            <!--cards-->
+            <div class="review-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6pwfb_EY7mHggS8bSEo_P4y_bDz5jxrvtt6U1-cCEyg&s=10" alt="">
+                <h3>Rakhi N.</h3>
+                <h5>Mumbai</h5>
+                 <div class="stars"><span style="color:rgb(246, 250, 13)">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                <p>"Home physiotherapy service is a blessing for for my father."</p>
+                <h4>(Edge Care)</h4>
+            </div>
+
+              <div class="review-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvxkN8C0AKf9X4glRboB1u-mKhgfJy1IInuCCi7gQwQA&s=10" alt="">
+                <h3>Chaithanya S.</h3>
+                <h5>Kerala</h5>
+                 <div class="stars"><span style="color:rgb(246, 250, 13)">&#9733;&#9733;&#9733;&#9733;</span></div>
+                <p>"After 3 sessions my back pain was 80% gone. Dr.team is amazing."</p>
+                <h4>(Back Pain)</h4>
+            </div>
+
+              <div class="review-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGYJ3JWIYUPxo1azju66lYUBsr-BvDtVtoRxNCjDOktQ&s" alt="">
+                <h3>Pawan G.</h3>
+                <h5>Telangana</h5>
+                 <div class="stars"><span style="color:rgb(246, 250, 13)">&#9733;&#9733;&#9733;&#9733;</span></div>
+                <p>"Best physiotherapy for knee rehab. Got back to running in 1 month."</p>
+                <h4>(Sports Injury)</h4>
+            </div>
+
+              <div class="review-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZvabEE_TNgRzOllhDknCb3Pcq6OwHbpwJPucBr8t__w&s=10" alt="">
+                <h3>Govardhan K.</h3>
+                <h5>Hyderabad</h5>
+                 <div class="stars"><span style="color:rgb(246, 250, 13)">&#9733;&#9733;&#9733;&#9733;</span></div>
+                <p>"Post-surgery recovery was so smooth. Very professional staff."</p>
+                <h4>(Post Surgery)</h4>
+            </div>
+
+              <div class="review-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMEGFU1RlKqIt9lA8LeLPR9llHVXbDQ4uhTdu41yu9cA&s=10" alt="">
+                <h3>Fathima S.</h3>
+                <h5>Bangalore</h5>
+                 <div class="stars"><span style="color:rgb(246, 250, 13)">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                <p>"Neck and shoulder pian completely cured. Highly recommend!"</p>
+                <h4>(Neck Pain)</h4>
+            </div>
+
+              <div class="review-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXfnAv8hwtnDhnjhztzbbqK_MLo5WFG24zmsQC1_Le4Q&s=10" alt="">
+                <h3>Swathy G.</h3>
+                <h5>Chennai</h5>
+                 <div class="stars"><span style="color:rgb(246, 250, 13)">&#9733;&#9733;&#9733;&#9733;</span></div>
+                <p>"Great treatment for sciatica. Pain free after 2 weeks."</p>
+                <h4>(Sciatica)</h4>
+            </div>
+
+        </div>
+    </section>
+
+    <!--video section-->
+
+    <section class="section">
+
+        <h2>Video Reviews</h2>
+
+      <div class="video-grid">
+
+        <div class="video-card">
+            <img src="https://i.ytimg.com/vi/Ssb9DyH92W0/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB6XmPOIJ3AEbq-0zctJ6KdIRNgcw">
+            <div class="name">Mr. UDESKY KONG <br> (Muscle Pain)</div>
+            <a href="https://youtu.be/Ssb9DyH92W0?si=S2ArBlFB_-ry0a3X" >View Review</a>
+        </div>
+
+           <div class="video-card">
+            <img src="https://i.ytimg.com/vi/0fACF9pkLDw/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAJcAbyAo9POTHrZCT-yXqezY3NEg">
+            <div class="name">Mrs. MAI <br> (Sciatica)</div>
+            <a href="https://youtu.be/0fACF9pkLDw?si=7d9d8-vXBKzhw6rm" >View Review</a>
+        </div>
+
+           <div class="video-card">
+            <img src="https://i.ytimg.com/vi/QpwUsXoHKzk/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDlCkygt0JiYIDlu9Uuy_AvLlVi2A">
+            <div class="name">Mr. SIMON <br> (Sports Injury)</div>
+            <a href="https://youtu.be/QpwUsXoHKzk?si=iF2eB19gjk1FHuK9" >View Review</a>
+        </div>
+
+           <div class="video-card">
+            <img src="https://i.ytimg.com/vi/l7v5LRsG8qw/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDmb7PX_Q3Q7LCjkEFaiAINRveM4w">
+            <div class="name">Mrs. HELEN <br> (Ankle Injury)</div>
+            <a href="https://youtu.be/l7v5LRsG8qw?si=u8t70tWAYcRqJsCA" >View Review</a>
+        </div>
+
+           <div class="video-card">
+            <img src="https://i.ytimg.com/vi/GdyC-zuQeZo/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLD0Xaw2G4n1IFIm3MmhFph8ZpmUgA">
+            <div class="name">Mr. ADAM <br> (Foot Pain)</div>
+            <a href="https://youtu.be/l7v5LRsG8qw?si=XSaPywDlhFlctrM4" >View Review</a>
+        </div>
+
+           <div class="video-card">
+            <img src="https://i.ytimg.com/vi/RKS_q7zD7Kk/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCqXOYcZz98p1lE4mONvgrFW6-pfQ">
+            <div class="name">Mrs. MEGAN<br> (Joint Pain)</div>
+            <a href="https://youtu.be/RKS_q7zD7Kk?si=IhYLKeGs3Fe0p7ud" >View Review</a>
+        </div>
+
+        </div>
+        </section>
+
+        <!--footer section-->
+
+        <footer>
+
+            <h1>Vitality Physiotherapy Center</h1>
+            <h3>NABH Certified Physiotherapy Clinic.</h3>
+            <p>&copy;2026 Vitality Physiotherapy. | All Rights Reserved.</p>
+            <h2> &#9993; @vitalityphysiotherapyhelp.com | &#9742; +123 45782 76543</h2>
+
+        </footer>
+
+        <script>
+
+// ===============================
+// Hamburger Menu
+// ===============================
+
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+
+hamburger.addEventListener("click", () => {
+
+    navLinks.classList.toggle("active");
+    hamburger.classList.toggle("active");
+
+});
+
+// ===============================
+// Close Menu After Clicking Link
+// ===============================
+
+const menuLinks = document.querySelectorAll(".nav-links a");
+
+menuLinks.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navLinks.classList.remove("active");
+        hamburger.classList.remove("active");
+
+    });
+
+});
+        </script>
+
+</body>
+</html>
