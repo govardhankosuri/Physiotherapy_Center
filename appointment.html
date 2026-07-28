@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment | PhysioCare Center</title>
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #0284c7;
+            --primary-dark: #0369a1;
+            --accent: #38bdf8;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --border: #e2e8f0;
+            --success: #10b981;
+            --radius: 12px;
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .header{
+    width:100%;
+    background:#fff;
+    position:sticky;
+    top:0;
+    z-index:999;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:10px 0px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+
+.logo img{
+    height: 80px;
+    width: 180px;
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    color:#333;
+    align-items: center;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active{
+    color:#0f4c81;
+}
+
+.nav-btn{
+    display:flex;
+    align-content: center;
+
+}
+.btn-outline1{
+    display:inline;
+    border:2px solid #0f4c81;
+    color:#0f4c81;
+    padding:12px 30px;
+    border-radius:30px;
+    transition:.3s;
+    margin-left:15px;
+}
+
+.btn-outline1:hover{
+
+    color:black;
+}
+
+
+
+
+
+/* ===========================
+   HAMBURGER
+=========================== */
+
+.hamburger{
+    display:none;
+    cursor:pointer;
+}
+
+.hamburger span{
+    display:block;
+    width:28px;
+    height:3px;
+    margin:6px;
+    background:#0f4c81;
+    transition:.4s;
+}
+@media(max-width:768px){
+
+section{
+    padding:60px 5%;
+}
+
+.section-title h2{
+    font-size:30px;
+}
+
+.hero h1{
+    font-size:38px;
+}
+
+.hero p{
+    font-size:16px;
+}
+
+.desktop-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    margin-left:0;
+    padding:12px 26px;
+}
+
+.nav-links{
+    padding-bottom:20px;
+}
+
+/* Navigation */
+
+.nav-links{
+    position:absolute;
+    top:80px;
+    left:-100%;
+    width:100%;
+    background:#fff;
+
+    flex-direction:column;
+    align-items:center;
+
+    gap:25px;
+
+    padding:30px 0;
+
+    transition:.4s;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
+
+.nav-links.active{
+    left:0;
+}
+
+.hamburger{
+    display:block;
+}
+
+.about-container,
+.service-container,
+.stats,
+.footer-content,
+.why-container{
+    grid-template-columns:1fr;
+}
+
+.hero-buttons{
+    flex-direction:column;
+    align-items:center;
+}
+
+.btn-outline{
+    margin-left:0;
+}
+
+.cta h2{
+    font-size:30px;
+}
+
+.stat-box h2{
+    font-size:36px;
+}
+
+}
+
+/* ===========================
+   SMALL MOBILE
+=========================== */
+
+@media(max-width:480px){
+
+.logo{
+    font-size:22px;
+}
+
+.hero-content h1{
+    font-size:32px;
+}
+
+.hero-content p{
+    font-size:15px;
+}
+
+.section-title h2{
+    font-size:26px;
+}
+
+.btn,
+.btn-outline{
+    width:100%;
+    text-align:center;
+}
+
+}
+
+
+        /* --- HEADER & NAVBAR --- */
+        header {
+            background: #ffffff;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--dark);
+        }
+
+        /* --- HERO BANNER --- */
+        .hero-banner {
+            background: linear-gradient(rgba(2, 132, 199, 0.85), rgba(3, 105, 161, 0.9)), url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero-banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-banner p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* --- MAIN BOOKING CONTAINER --- */
+        .container {
+            max-width: 1000px;
+            margin: -3rem auto 4rem auto;
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 2.5rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Stepper Header */
+        .stepper {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .step {
+            text-align: center;
+            flex: 1;
+            position: relative;
+            z-index: 2;
+        }
+
+        .step-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--border);
+            color: var(--gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.5rem auto;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .step.active .step-circle {
+            background: var(--primary);
+            color: white;
+        }
+
+        .step.completed .step-circle {
+            background: var(--success);
+            color: white;
+        }
+
+        .step-text {
+            font-size: 0.85rem;
+            color: var(--gray);
+            font-weight: 500;
+        }
+
+        .step.active .step-text {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Form Steps Panels */
+        .form-step {
+            display: none;
+        }
+
+        .form-step.active {
+            display: block;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        /* --- STEP 1: SERVICES & PACKAGES --- */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .service-card {
+            border: 2px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            position: relative;
+        }
+
+        .service-card:hover {
+            border-color: var(--accent);
+        }
+
+        .service-card.selected {
+            border-color: var(--primary);
+            background: #f0f9ff;
+        }
+
+        .service-card h4 {
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .service-card p {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-bottom: 1rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            background: var(--border);
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            color: var(--dark);
+        }
+
+        .service-card.selected .tag {
+            background: #bae6fd;
+            color: var(--primary-dark);
+        }
+
+        .price-time {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--primary-dark);
+        }
+
+        /* --- STEP 2: STAFF & SCHEDULE --- */
+        .staff-selection {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .staff-card {
+            border: 2px solid var(--border);
+            padding: 1rem;
+            border-radius: var(--radius);
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .staff-card img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 0.5rem;
+        }
+
+        .staff-card.selected {
+            border-color: var(--primary);
+            background: #f0f9ff;
+        }
+
+        .datetime-picker {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        @media(max-width: 768px) {
+            .datetime-picker {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.95rem;
+        }
+
+        .buffer-note {
+            font-size: 0.8rem;
+            color: var(--gray);
+            margin-top: 0.3rem;
+        }
+
+        /* --- STEP 3: INTAKE & CONSENT FORMS --- */
+        .consent-box {
+            background: #f1f5f9;
+            padding: 1rem;
+            border-radius: 8px;
+            max-height: 150px;
+            overflow-y: scroll;
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-bottom: 1rem;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .checkbox-group input {
+            width: auto;
+        }
+
+        /* --- STEP 4: PAYMENT GATEWAY --- */
+        .payment-options {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .pay-option {
+            flex: 1;
+            border: 2px solid var(--border);
+            padding: 1rem;
+            border-radius: var(--radius);
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .pay-option.selected {
+            border-color: var(--primary);
+            background: #f0f9ff;
+        }
+
+        .summary-card {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            margin-bottom: 1.5rem;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .summary-row.total {
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-top: 1px solid var(--border);
+            padding-top: 0.5rem;
+            margin-top: 0.5rem;
+            color: var(--primary-dark);
+        }
+
+        /* --- NAVIGATION BUTTONS --- */
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: background 0.2s;
+        }
+
+        .btn-prev {
+            background: var(--border);
+            color: var(--dark);
+        }
+
+        .btn-next, .btn-submit {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-next:hover, .btn-submit:hover {
+            background: var(--primary-dark);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 2rem 1.5rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #334155;
+            padding-top: 1.5rem;
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+                padding: 1.5rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .container {
+                margin: -1rem 1rem 2rem 1rem;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER & NAVBAR -->
+    <header class="header">
+
+        <nav class="navbar">
+
+            <!-- Logo -->
+            <div class="logo">
+                <img src="physio.webp" class="img">
+                
+            </div>
+
+            <!-- Navigation -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">Aboutus</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="doctors.html">Therapists Directory</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a href="appointment.html" class="btn-outline1">
+                        Book Appointment
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Hamburger -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- HERO BANNER -->
+    <section class="hero-banner">
+        <h1>Schedule Your PhysioTherapy Session</h1>
+        <p>Choose your preferred therapy, practitioner, and time slot seamlessly online.</p>
+    </section>
+
+    <!-- MAIN BOOKING CONTAINER -->
+    <div class="container">
+        
+        <!-- Stepper Indicator -->
+        <div class="stepper">
+            <div class="step active" id="stepIndicator1">
+                <div class="step-circle">1</div>
+                <div class="step-text">Service</div>
+            </div>
+            <div class="step" id="stepIndicator2">
+                <div class="step-circle">2</div>
+                <div class="step-text">Schedule</div>
+            </div>
+            <div class="step" id="stepIndicator3">
+                <div class="step-circle">3</div>
+                <div class="step-text">Intake Form</div>
+            </div>
+            <div class="step" id="stepIndicator4">
+                <div class="step-circle">4</div>
+                <div class="step-text">Payment</div>
+            </div>
+        </div>
+
+        <form id="bookingForm">
+            
+            <!-- STEP 1: SERVICE SELECTION -->
+            <div class="form-step active" id="formStep1">
+                <h3>Select Therapy Service & Package</h3>
+                <div class="service-grid">
+                    <div class="service-card selected" onclick="selectService(this, 'Initial Assessment', 8000, '60 mins')">
+                        <h4>Initial Assessment</h4>
+                        <p>Comprehensive evaluation of movement, posture, and pain triggers.</p>
+                        <div class="tags">
+                            <span class="tag">Full Body</span>
+                            <span class="tag">Spine & Joints</span>
+                        </div>
+                        <div class="price-time"><span>Rs 8000</span><span>60 Mins</span></div>
+                    </div>
+                    <div class="service-card" onclick="selectService(this, 'Sports Rehabilitation', 7000, '45 mins')">
+                        <h4>Sports Rehabilitation</h4>
+                        <p>Targeted therapy designed to recover from athletic sprains & tears.</p>
+                        <div class="tags">
+                            <span class="tag">Knee / Shoulder</span>
+                            <span class="tag">Muscles</span>
+                        </div>
+                        <div class="price-time"><span>Rs 7000</span><span>45 Mins</span></div>
+                    </div>
+                    <div class="service-card" onclick="selectService(this, 'Chronic Pain Relief', 9000, '60 mins')">
+                        <h4>Chronic Pain Relief</h4>
+                        <p>Advanced modalities for long-standing back and neck discomfort.</p>
+                        <div class="tags">
+                            <span class="tag">Lower Back</span>
+                            <span class="tag">Neck / Posture</span>
+                        </div>
+                        <div class="price-time"><span>Rs 9000</span><span>60 Mins</span></div>
+                    </div>
+                </div>
+                <div class="btn-container">
+                    <div></div>
+                    <button type="button" class="btn btn-next" onclick="nextStep()">Next: Schedule</button>
+                </div>
+            </div>
+
+            <!-- STEP 2: STAFF & SCHEDULE -->
+            <div class="form-step" id="formStep2">
+                <h3>Select Practitioner & Appointment Time</h3>
+                <label style="margin-bottom:0.5rem; display:block; font-weight:500;">Available Staff Calendars</label>
+                <div class="staff-selection">
+                    <div class="staff-card selected" onclick="selectStaff(this, 'Dr. Sarah Jenkins, PT')">
+                        <img src="file_0000000057888208a7d3c8fb739242e4.png" alt="Dr. Sarah">
+                        <h4>Dr. Sarah Jenkins</h4>
+                        <p style="font-size:0.8rem; color:var(--gray);">Sports & Spine Specialist</p>
+                    </div>
+                    <div class="staff-card" onclick="selectStaff(this, 'Dr. Mark Thompson, PT')">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=150&q=80" alt="Dr. Mark">
+                        <h4>Dr. Mark Thompson</h4>
+                        <p style="font-size:0.8rem; color:var(--gray);">Neuromuscular Expert</p>
+                    </div>
+                </div>
+
+                <div class="datetime-picker">
+                    <div class="form-group">
+                        <label for="datePicker">Appointment Date</label>
+                        <input type="date" id="datePicker" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="timePicker">Available Time Slots</label>
+                        <select id="timePicker" required>
+                            <option value="09:00 AM">09:00 AM - 10:00 AM</option>
+                            <option value="10:30 AM">10:30 AM - 11:30 AM</option>
+                            <option value="02:00 PM">02:00 PM - 03:00 PM</option>
+                            <option value="04:00 PM">04:00 PM - 05:00 PM</option>
+                        </select>
+                        <div class="buffer-note"><i class="fa-solid fa-clock"></i> Includes 15-min sanitation & buffer period between sessions.</div>
+                    </div>
+                </div>
+
+                <div class="btn-container">
+                    <button type="button" class="btn btn-prev" onclick="prevStep()">Back</button>
+                    <button type="button" class="btn btn-next" onclick="nextStep()">Next: Intake Form</button>
+                </div>
+            </div>
+
+            <!-- STEP 3: DIGITAL INTAKE & CONSENT -->
+            <div class="form-step" id="formStep3">
+                <h3>Patient Digital Intake & Consent Form</h3>
+                <div class="datetime-picker">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="patientName" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address (For Reminders)</label>
+                        <input type="email" id="patientEmail" placeholder="email@example.com" required>
+                    </div>
+                </div>
+                <div class="datetime-picker">
+                    <div class="form-group">
+                        <label>Phone Number (SMS Notifications)</label>
+                        <input type="tel" id="patientPhone" placeholder="+91 98765 433210" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Primary Focus / Pain Region</label>
+                        <input type="text" id="painRegion" placeholder="e.g., Lower back pain after lifting">
+                    </div>
+                </div>
+
+                <label style="font-size:0.9rem; font-weight:500; margin-bottom:0.5rem; display:block;">Treatment & Facility Consent</label>
+                <div class="consent-box">
+                    By checking the agreement box below, you consent to diagnostic examinations and physical therapy procedures carried out by our certified staff. You understand that physical exertion can sometimes invoke temporary muscular soreness. You also opt-in to receive automated email and SMS appointment reminders 24 hours prior to scheduled therapy sessions.
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="consentCheck" required>
+                    <label for="consentCheck" style="font-size:0.9rem; cursor:pointer;">I have read, understood, and agree to the digital intake and safety policy terms.</label>
+                </div>
+
+                <div class="btn-container">
+                    <button type="button" class="btn btn-prev" onclick="prevStep()">Back</button>
+                    <button type="button" class="btn btn-next" onclick="validateStep3()">Next: Payment</button>
+                </div>
+            </div>
+
+            <!-- STEP 4: PAYMENT GATEWAY -->
+            <div class="form-step" id="formStep4">
+                <h3>Payment Gateway & Checkout</h3>
+                
+                <div class="summary-card">
+                    <div class="summary-row"><span>Service:</span> <span id="sumService">Initial Assessment</span></div>
+                    <div class="summary-row"><span>Practitioner:</span> <span id="sumStaff">Dr. Sarah Jenkins, PT</span></div>
+                    <div class="summary-row"><span>Schedule:</span> <span id="sumDateTime">-- / --</span></div>
+                    <div class="summary-row total"><span>Total Amount:</span> <span id="sumPrice">Rs 8000</span></div>
+                </div>
+
+                <label style="font-size:0.9rem; font-weight:500; margin-bottom:0.5rem; display:block;">Select Secure Payment Method</label>
+                <div class="payment-options">
+                    <div class="pay-option selected" onclick="selectPayment('card', this)">
+                        <i class="fa-solid fa-credit-card fa-2x" style="color:var(--primary); margin-bottom:0.5rem;"></i>
+                        <div>Credit / Debit Card</div>
+                    </div>
+                    <div class="pay-option" onclick="selectPayment('clinic', this)">
+                        <i class="fa-solid fa-hospital-user fa-2x" style="color:var(--primary); margin-bottom:0.5rem;"></i>
+                        <div>Pay at Clinic</div>
+                    </div>
+                </div>
+
+                <div id="cardDetailsContainer">
+                    <div class="form-group">
+                        <label>Card Number</label>
+                        <input type="text" placeholder="4532 •••• •••• 8821">
+                    </div>
+                    <div class="datetime-picker">
+                        <div class="form-group">
+                            <label>Expiry Date</label>
+                            <input type="text" placeholder="MM/YY">
+                        </div>
+                        <div class="form-group">
+                            <label>CVV</label>
+                            <input type="password" placeholder="123">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-container">
+                    <button type="button" class="btn btn-prev" onclick="prevStep()">Back</button>
+                    <button type="button" class="btn btn-submit" onclick="completeBooking()">Confirm & Book Appointment</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>PhysioTherapy Center</h4>
+                <p style="font-size:0.9rem; color:#cbd5e1;">Dedicated recovery care specializing in targeted physiotherapy, posture training, and athletic rehabilitation programs.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Meet Practitioners</a></li>
+                    <li><a href="#">Treatment Packages</a></li>
+                    <li><a href="#">Client Portal</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Working Hours</h4>
+                <ul>
+                    <li>Mon - Fri: 8:00 AM - 7:00 PM</li>
+                    <li>Saturday: 9:00 AM - 4:00 PM</li>
+                    <li>Sunday: Closed</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> 452 Wellness Ave, Bangalore.</li>
+                    <li><i class="fa-solid fa-phone"></i> +91 98765 43210</li>
+                    <li><i class="fa-solid fa-envelope"></i> care@physiocenter.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Vitality PhysioTherapy Center. All rights reserved. Built for optimal recovery management.
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Booking Form State Management
+        let currentStep = 1;
+        let bookingData = {
+            service: "Initial Assessment",
+            price: 8000,
+            staff: "Dr. Sarah Jenkins, PT",
+            date: "",
+            time: ""
+        };
+
+        function updateSummary() {
+            document.getElementById('sumService').innerText = bookingData.service;
+            document.getElementById('sumStaff').innerText = bookingData.staff;
+            document.getElementById('sumDateTime').innerText = (bookingData.date && bookingData.time) ? `${bookingData.date} at ${bookingData.time}` : 'Not fully selected';
+            document.getElementById('sumPrice').innerText = `Rs ${bookingData.price}`;
+        }
+
+        function selectService(element, serviceName, price, duration) {
+            document.querySelectorAll('.service-card').forEach(card => card.classList.remove('selected'));
+            element.classList.add('selected');
+            bookingData.service = serviceName;
+            bookingData.price = price;
+            updateSummary();
+        }
+
+        function selectStaff(element, staffName) {
+            document.querySelectorAll('.staff-card').forEach(card => card.classList.remove('selected'));
+            element.classList.add('selected');
+            bookingData.staff = staffName;
+            updateSummary();
+        }
+
+        function selectPayment(type, element) {
+            document.querySelectorAll('.pay-option').forEach(opt => opt.classList.remove('selected'));
+            element.classList.add('selected');
+            const cardContainer = document.getElementById('cardDetailsContainer');
+            if(type === 'clinic') {
+                cardContainer.style.display = 'none';
+            } else {
+                cardContainer.style.display = 'block';
+            }
+        }
+
+        function nextStep() {
+            if (currentStep === 2) {
+                const dateVal = document.getElementById('datePicker').value;
+                const timeVal = document.getElementById('timePicker').value;
+                if(!dateVal) {
+                    alert('Please select an appointment date.');
+                    return;
+                }
+                bookingData.date = dateVal;
+                bookingData.time = timeVal;
+                updateSummary();
+            }
+
+            if (currentStep < 4) {
+                document.getElementById(`formStep${currentStep}`).classList.remove('active');
+                document.getElementById(`stepIndicator${currentStep}`).classList.remove('active');
+                document.getElementById(`stepIndicator${currentStep}`).classList.add('completed');
+                
+                currentStep++;
+                
+                document.getElementById(`formStep${currentStep}`).classList.add('active');
+                document.getElementById(`stepIndicator${currentStep}`).classList.add('active');
+                window.scrollTo({ top: 300, behavior: 'smooth' });
+            }
+        }
+
+        function prevStep() {
+            if (currentStep > 1) {
+                document.getElementById(`formStep${currentStep}`).classList.remove('active');
+                document.getElementById(`stepIndicator${currentStep}`).classList.remove('active');
+                
+                currentStep--;
+                
+                document.getElementById(`formStep${currentStep}`).classList.add('active');
+                document.getElementById(`stepIndicator${currentStep}`).classList.remove('completed');
+                document.getElementById(`stepIndicator${currentStep}`).classList.add('active');
+                window.scrollTo({ top: 300, behavior: 'smooth' });
+            }
+        }
+
+        function validateStep3() {
+            const name = document.getElementById('patientName').value;
+            const email = document.getElementById('patientEmail').value;
+            const phone = document.getElementById('patientPhone').value;
+            const consent = document.getElementById('consentCheck').checked;
+
+            if(!name || !email || !phone) {
+                alert('Please complete all contact details fields.');
+                return;
+            }
+            if(!consent) {
+                alert('You must accept the terms and digital intake consent form to proceed.');
+                return;
+            }
+            nextStep();
+        }
+
+        function completeBooking() {
+            alert('Success! Your appointment has been booked. Automated confirmation reminders have been sent to your email and phone.');
+            location.reload();
+        }
+
+        // Set default date picker min to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('datePicker').min = today;
+        document.getElementById('datePicker').value = today;
+        bookingData.date = today;
+    </script>
+</body>
+</html>
