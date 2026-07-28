@@ -1,0 +1,715 @@
+<html>
+    <head>
+        <title>
+            physotheripy_center
+        </title>
+        <style>
+
+            *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+            body{
+    background:#f5f9fc;
+    color:#333;
+    }
+
+
+/* Header */
+  
+  header {
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 3%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    width: 100px;
+    height: 80px;
+}
+
+.logo h2 {
+    color: #0097a7;
+    font-size: 24px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #131212;
+    font-weight: 500;
+    transition: .3s;
+     
+}
+
+nav ul li a:hover {
+    color:#0f4c81;
+}
+
+.btn1 {
+    display:inline;
+    border:2px solid #0f4c81;
+    color:#0f4c81;
+    padding:12px 30px;
+    border-radius:30px;
+    transition:.3s;
+    margin-left:15px;
+}
+
+.btn1:hover {
+    color:black;
+    
+}
+
+
+.menu-btn {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+  
+
+  .hero-img{
+    width: 1350px;
+    height: 650px;
+    max-width: 100%;
+    height: auto;
+  }
+  @media(max-width:400px){
+    .hero-img{
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+  }
+
+
+
+
+            .hero{
+    background:linear-gradient(rgba(0,119,182,.85),
+    rgba(0,119,182,.85)),
+    url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=1600");
+    background-size:cover;
+    background-position:center;
+    color:#fff;
+    text-align:center;
+    padding:100px 20px;
+}
+
+.hero h1{
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.hero input{
+    width:350px;
+    max-width:90%;
+    padding:15px;
+    border:none;
+    outline:none;
+    border-radius:40px;
+    font-size:16px;
+}
+
+/* ===========================
+   DOCTORS
+=========================== */
+
+.doctor-section{
+    width:90%;
+    max-width:1300px;
+    margin:70px auto;
+}
+
+.doctor-section h2{
+    text-align:center;
+    font-size:35px;
+    color:#0077b6;
+    margin-bottom:50px;
+}
+
+.doctor-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.doctor-card{
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.doctor-card:hover{
+    transform:translateY(-10px);
+}
+
+.doctor-card img{
+    width:100%;
+    height:370px;
+    object-fit:cover;
+}
+
+.doctor-card h3{
+    margin-top:20px;
+    color:#0077b6;
+}
+
+.specialization{
+    font-weight:600;
+    color:#0b8f4d;
+    margin:10px 0;
+}
+
+.doctor-card p{
+    margin:8px;
+}
+
+.doctor-card button{
+    margin:20px 0;
+    padding:12px 25px;
+    border:none;
+    background:#0077b6;
+    color:#fff;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.doctor-card button:hover{
+    background:#023e8a;
+}
+/* ===========================
+   WHY CHOOSE US
+=========================== */
+
+.why-us{
+    background:#eef8ff;
+    padding:80px 8%;
+    text-align:center;
+}
+
+.why-us h2{
+    font-size:36px;
+    color:#0077b6;
+    margin-bottom:50px;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.feature-box{
+    background:#ffffff;
+    padding:35px 25px;
+    border-radius:15px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.feature-box:hover{
+    transform:translateY(-8px);
+}
+
+.feature-box i{
+    font-size:45px;
+    color:#0077b6;
+    margin-bottom:20px;
+}
+
+.feature-box h3{
+    margin-bottom:15px;
+}
+
+.feature-box p{
+    color:#555;
+    line-height:1.7;
+}
+
+
+/* ===========================
+   CALL TO ACTION
+=========================== */
+
+.cta{
+    background:#0077b6;
+    color:#fff;
+    text-align:center;
+    padding:70px 20px;
+}
+
+.cta h2{
+    font-size:36px;
+    margin-bottom:15px;
+}
+
+.cta p{
+    margin-bottom:30px;
+    font-size:17px;
+}
+
+.cta a{
+    display:inline-block;
+    text-decoration:none;
+    color:#0077b6;
+    background:#fff;
+    padding:14px 35px;
+    border-radius:30px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.cta a:hover{
+    background:#023e8a;
+    color:#fff;
+}
+
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    background:#022b3a;
+    color:#fff;
+    padding:60px 8% 20px;
+}
+
+.footer-content{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:40px;
+    margin-bottom:30px;
+}
+
+
+
+.footer-content a{
+    display:block;
+    color:#fff;
+    text-decoration:none;
+    margin-bottom:10px;
+    transition:.3s;
+}
+
+.footer-content a:hover{
+    color:#4cc9f0;
+}
+
+.copyright{
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.2);
+    padding-top:20px;
+    font-size:15px;
+}
+
+
+/* ===========================
+   TABLET RESPONSIVE
+=========================== 
+
+@media(max-width:992px){
+
+.hero h1{
+    font-size:36px;
+}
+
+.hero p{
+    font-size:15px;
+}
+
+.doctor-section h2,
+.why-us h2,
+.cta h2{
+    font-size:30px;
+}
+
+}
+
+
+/* ===========================
+   MOBILE RESPONSIVE
+=========================== 
+
+@media(max-width:768px){
+
+.navbar{
+    width:92%;
+    padding:16px 0;
+}
+
+.logo{
+    font-size:20px;
+}
+
+.logo i{
+    font-size:24px;
+}
+
+.hamburger{
+    display:block;
+}
+
+.nav-links{
+    position:absolute;
+    top:100%;
+    left:-100%;
+    width:100%;
+    background:#ffffff;
+    flex-direction:column;
+    text-align:center;
+    padding:25px 0;
+    gap:20px;
+    transition:.4s;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+.nav-links.active{
+    left:0;
+}
+
+.hero{
+    padding:70px 20px;
+}
+
+.hero h1{
+    font-size:30px;
+}
+
+.hero p{
+    font-size:15px;
+}
+
+.hero input{
+    width:100%;
+}
+
+.doctor-section{
+    margin:50px auto;
+}
+
+.doctor-section h2,
+.why-us h2,
+.cta h2{
+    font-size:28px;
+}
+
+.doctor-card img{
+    height:260px;
+}
+
+.footer-content{
+    text-align:center;
+}
+
+}*/
+
+
+/* ===========================
+   SMALL MOBILE
+=========================== 
+
+@media(max-width:480px){
+
+.hero h1{
+    font-size:26px;
+}
+
+.hero p{
+    font-size:14px;
+}
+
+.logo{
+    font-size:18px;
+}
+
+.logo i{
+    font-size:22px;
+}
+
+.doctor-card{
+    margin:0 5px;
+}
+
+.doctor-card img{
+    height:240px;
+}
+
+.cta h2{
+    font-size:24px;
+}
+
+.cta p{
+    font-size:15px;
+}
+
+.footer-content h3{
+    font-size:20px;
+    text-align: center;
+}
+
+.footer-content p,
+.footer-content a{
+    font-size:14px;
+    text-align: center;
+}
+
+}*/
+
+/*mobile*/
+  @media(max-width:768px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 82px;
+        left: 0;
+        width: 100%;
+        background: white;
+        display: none;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 20px;
+        gap: 18px;
+    }
+    nav ul li a:hover{
+        color: #0b6e6e;
+    }
+    .logo1{
+        width: 48px;
+        height: 56px;
+        border-radius: 8px;
+
+    }
+}
+
+
+        </style>
+    </head>
+    <body>
+        <header>
+    <div class="navbar">
+
+<div class="logo">
+<img src="p.logo.png" alt="logo">
+
+</div>
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<nav id="navMenu">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="service.html">Services</a></li>
+<li><a href="testimonials.html">Testimonials</a></li>
+<li><a href="doctors.html">Doctor's Directory</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="appointment.html" class="btn1">Book Appointment</a></li>
+</ul>
+</nav>
+
+</div>
+
+  
+</header>
+<div class="logo-1">
+<img src="theripist.img" class="hero-img"alt="iamge">
+</div>
+        <section class="hero">
+            <div class="content">
+                <h1>Our Doctors</h1>
+                <p>Experienced  physiotherapists commited to providing 
+                    accurate  and compassionate healthcare </p>
+            </div>
+
+        </section>
+        <section class="doctor-section">
+            <h2>Meet Our  physiotherapists</h2>
+            <div class="doctor-container">
+                <div class="doctor-card">
+                    <img src="dimage.jpg" alt="doctor">
+                    <h3>Dr . Sreeja</h3>
+                    <p class="specialization">
+                        Brain injury & Neuro rehabilitation specialist.
+                    </p>
+                    <p>Masters in Neurological Physiotheraphy.</p>
+                    <P>Experience: 5 years</P>
+                    <p>timing : 9am-4Pm</p>
+                    <button class="book-btn">
+                        Book Appointment
+                    </button>
+                </div>
+                <div class="doctor-card">
+                    <img src="images.d.jpg" alt="image">
+                    <h3>Dr. Praveen</h3>
+                    <p class="specialization">
+                        Sports injury & spine specialist
+                    <p>Education: BPT Masters in sports physiotheraphy.</p>
+                    <P>Experience: 8 years</P>
+                    <p>timing : 9am-4Pm</p>
+                    <button class="book-btn">
+                        Book Appointment
+                    </button>
+                </div>
+                <div class="doctor-card">
+                    <img src="1d .img" alt="doctor">
+                    <h3>Dr. Rahul Mehta</h3>
+                    <p class="specialization">
+                        Post-surgery & Pediatric Care
+                    <p>Education: Diploma in Pediatric Physitheraphy</p>
+                    <P>Experience: 12 years</P>
+                    <p>timing : 9am-4Pm</p>
+                    <button class="book-btn">
+                        Book Appointment
+                    </button>
+
+                </div>
+                <div class="doctor-card">
+                    <img src="phy .img" alt="doctor">
+                    <h3>Dr. Vikram Rao</h3>
+                    <p class="specialization">
+                        Neurological rehabilitation specialsit.
+                    <p>Masters in Neurological Physiotheraphy.</p>
+                    <P>Experience: 5 years</P>
+                    <p>timing : 9am-4Pm</p>
+                    <button class="book-btn">
+                        Book Appointment
+                    </button>
+
+                </div>
+                <div class="doctor-card">
+                    <img src="https://content.jdmagicbox.com/v2/comp/amravati/z1/9999px721.x721.220825155659.j1z1/catalogue/dr-shikha-chawla-physio-flex-physiotherapy-clinic-krishna-nagar-amravati-physiotherapists-5gp6objrt6.jpg" alt="doctor">
+                    <h3>Dr. Sara Nair</h3>
+                    <p class="specialization">
+                        Back,spine & geriatric Specialist.
+                    <p>Education: Maters in Musculoskeletal Physiotheraphy.</p>
+                    <P>Experience: 8 years</P>
+                    <p>timing : 9am-4Pm</p>
+                    <button class="book-btn">
+                        Book Appointment
+                    </button>
+
+                </div>
+                <div class="doctor-card">
+                    <img src="ppp.img" alt="doctor">
+                    <h3>Dr. Priya sharma</h3>
+                    <p class="specialization">
+                        Womens Health & Prenatal Care
+                    <p>Education: Diploma in womens Health Physiotheraphy.</p>
+                    <P>Experience: 5 years</P>
+                    <p>timing : 9am-4Pm</p>
+                    <button class="book-btn">
+                        Book Appointment
+                    </button>
+
+                </div>
+
+
+
+
+            </div>
+        </section>
+        <section class="Why choose us">
+           <center> <h2>Why choose our doctors?</h2> </center>
+           <br>
+           <br>
+           <br>
+            <div class="features">
+                <div class="feature-box">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    <h3>Experienced Doctors</h3>
+                    <p>Highly qualify specialists with years of experience.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    <h3>Advanced care</h3>
+                    <p>Modern physiotheraphy technoly for accurate results</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fa-solid fa-hosipital"></i>
+                    <h3>24/7 support</h3>
+                    <p>Emergency support whenever u need healthcare</p>
+                </div>
+
+            </div>
+        </section>
+        <br>
+        <br>
+        <br>
+        <section class="cta">
+            <h2>Need consulataion</h2>
+            <p>Booka an appontment with our expert doctors today</p>
+            <a href="appointment.html">Book Now</a>
+        </section>
+        <footer>
+            <center><div class="footer-content">
+                @2026.Physiotheraphy center. All rights reserved.
+            </div>
+            </center>
+        </footer>
+        <script>
+        
+
+function toggleMenu(){
+document.getElementById("navMenu").classList.toggle("active");
+}
+
+document.querySelectorAll("nav a").forEach(link=>{
+link.addEventListener("click",()=>{
+document.getElementById("navMenu").classList.remove("active");
+});
+});
+
+</script>
+           
+    </body>
+</html>
